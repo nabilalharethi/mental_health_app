@@ -5,6 +5,8 @@ import '../presentation/providers/auth_provider.dart';
 import '../presentation/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/constants/route_constants.dart';
+import 'presentation/pages/auth/register_screen.dart';
+import 'presentation/pages/home/home_screen.dart';
 
 void main() {
   runApp(
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
       initialRoute: RouteConstants.login,
       routes: {
         RouteConstants.login: (context) => LoginScreen(),
+        RouteConstants.register: (context) =>  RegisterScreen(),
+        RouteConstants.home: (context) => const HomeScreen(),
       },
     );
   }
