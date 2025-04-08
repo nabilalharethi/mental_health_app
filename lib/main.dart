@@ -7,16 +7,20 @@ import '../../../core/constants/app_constants.dart';
 import '../../../core/constants/route_constants.dart';
 import 'presentation/pages/auth/register_screen.dart';
 import 'presentation/pages/home/home_screen.dart';
+import 'presentation/pages/resources/resources_screen.dart';
+import 'presentation/providers/resource_provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => AuthProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => ResourceProvider()),
+      ],
       child: const MyApp(),
     ),
   );
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -31,6 +35,7 @@ class MyApp extends StatelessWidget {
         RouteConstants.login: (context) => LoginScreen(),
         RouteConstants.register: (context) =>  RegisterScreen(),
         RouteConstants.home: (context) => const HomeScreen(),
+        '/resources': (context) => const ResourcesScreen(),
       },
     );
   }

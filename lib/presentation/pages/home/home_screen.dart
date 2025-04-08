@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Feather.home),
+            icon: Icon(Feather.book),
             label: 'Resources',
           ),
           BottomNavigationBarItem(
