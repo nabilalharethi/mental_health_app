@@ -5,6 +5,7 @@ import '../../theme/app_theme.dart';
 import '../auth/login_screen.dart';
 import '../../../core/constants/route_constants.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import '../../../presentation/pages/appointments/appointments_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = [
     const DashboardView(),
     const PlaceholderWidget(title: 'Resources'),
-    const PlaceholderWidget(title: 'Appointments'),
+    const AppointmentsScreen(),
     const PlaceholderWidget(title: 'Profile'),
   ];
 

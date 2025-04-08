@@ -9,6 +9,8 @@ import 'presentation/pages/auth/register_screen.dart';
 import 'presentation/pages/home/home_screen.dart';
 import 'presentation/pages/resources/resources_screen.dart';
 import 'presentation/providers/resource_provider.dart';
+import 'presentation/pages/appointments/appointments_screen.dart';
+import 'presentation/providers/appointment_provider.dart';
 
 void main() {
   runApp(
@@ -16,6 +18,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => ResourceProvider()),
+        ChangeNotifierProvider(create: (_) => AppointmentProvider()),
       ],
       child: const MyApp(),
     ),
@@ -36,6 +39,7 @@ class MyApp extends StatelessWidget {
         RouteConstants.register: (context) =>  RegisterScreen(),
         RouteConstants.home: (context) => const HomeScreen(),
         '/resources': (context) => const ResourcesScreen(),
+        '/appointments': (context) => const AppointmentsScreen(),
       },
     );
   }
